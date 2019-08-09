@@ -10,9 +10,10 @@ To run `kshell` you need `kotlin-shell-core` and `kotlin-shell-kts` libraries as
 Packages with libraries can be found in this repository releases.
 
 ## run
+Kotlin Shell scripts have `.sh.kts` extension
 
-Kotlin Shell scripts have `.sh.kts` extension. To run them type:
-
+### command line
+To run type:
 ```shell
 kshell SCRIPT.sh.kts ARGS
 ```
@@ -25,3 +26,20 @@ kshell hello.sh.kts
 ```shell
 kshell greeting.sh.kts John
 ```
+
+### shebang
+Add `#!/usr/bin/env kshell` at the begining of a script file to be able to use it as executable
+
+example:
+_hello.sh.kts_
+```shell
+#!/usr/bin/env kshell
+shell { "echo hello world!"() } 
+```
+
+```shell
+$ chmod +x hello.sh.kts
+$ ./hello.sh.kts
+hello
+```
+
