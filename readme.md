@@ -28,7 +28,7 @@ kshell greeting.sh.kts John
 ```
 
 ### shebang
-Add `#!/usr/bin/env kshell` at the begining of a script file to be able to use it as executable
+Add `kshell` to `PATH` and `#!/usr/bin/env kshell` at the begining of a script file to be able to use it as executable.
 
 example:
 _hello.sh.kts_
@@ -38,6 +38,7 @@ shell { "echo hello world!"() }
 ```
 
 ```shell
+$ export PATH=$PATH:path/to/kshell
 $ chmod +x hello.sh.kts
 $ ./hello.sh.kts
 hello
