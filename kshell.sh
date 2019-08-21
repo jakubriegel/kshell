@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-KOTLINC=$(which kotlinc)
-LIB=${KOTLINC%bin*}lib
-CP=kshell.jar:${LIB}/kotlin-main-kts.jar
+SCRIPT=$0
+KSHELL_JAR=${SCRIPT%kshell*}/kshell.jar
 
-kotlinc -cp ${CP} -script $@
+kotlinc -cp ${KSHELL_JAR} -Dkotlin.script.classpath  -script $@
