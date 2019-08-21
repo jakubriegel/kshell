@@ -5,7 +5,7 @@ To learn more about Kotlin Shell check [here]("https://github.com/jakubriegel/ko
 
 ## get it
 
-To run `kshell` you need `kotlin-shell-core` and `kotlin-shell-kts` libraries as well as `kotlinc` installed.
+To run `kshell` you need `kotlin-shell-core` and `kotlin-shell-kts` as well as `kotlinc` installed.
 
 Packages with libraries can be found in this repository releases.
 
@@ -43,4 +43,3 @@ $ chmod +x hello.sh.kts
 $ ./hello.sh.kts
 hello
 ```
-
